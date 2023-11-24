@@ -1,12 +1,11 @@
-namespace AnimalShelterApi;
-
-public class WeatherForecast
+namespace AnimalShelterApi.Models
 {
-    public DateTime Date { get; set; }
-
-    public int TemperatureC { get; set; }
-
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-    public string? Summary { get; set; }
+  public class Animal
+  {
+    public int AnimalId { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Species { get; set; }
+    public string About { get; set; }
+  }
 }
