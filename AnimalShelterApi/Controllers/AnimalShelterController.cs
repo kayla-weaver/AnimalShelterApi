@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 
-namespace AnimalApi.Controllers
+namespace AnimalShelter.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnimalsController : ControllerBase
+    public class AnimalShelterController : ControllerBase
     {
         private readonly AnimalShelterContext _db;
-        public AnimalsController(AnimalShelterContext db)
+        public AnimalShelterController(AnimalShelterContext db)
         {
             _db = db;
         }
