@@ -18,9 +18,9 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 ## API Endpoints
 
 #### Request
-`GET /animals/`
+`GET /animalshelterr/`
 
-   http://localhost:5000/api/animals/
+   http://localhost:5000/api/animalshelter/
 
 #### Response
 
@@ -53,7 +53,7 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 #### Request
 `GET /animals/id`
 
-   http://localhost:5000/api/animals/1
+   http://localhost:5000/api/animalshelter/1
 
    #### Response 
         {
@@ -86,7 +86,7 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 
 `POST /animal/`
 
-    http://localhost:5000/api/animals
+    http://localhost:5000/api/animalshelter
 
 #### Request body
      { 
@@ -104,7 +104,7 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 
 `PUT /thing/id`
 
-   PUT http://localhost:5000/api/animals/3
+   PUT http://localhost:5000/api/animalshelter/3
 
 #### Request Body
 { 
@@ -121,7 +121,7 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 
 `DELETE /animals/id`
 
-   DELETE http://localhost:5000/api/animal/3
+   DELETE http://localhost:5000/api/animalshelter/3
 
 #### Response
 
@@ -133,7 +133,7 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 
 `GET /animals/id`
 
-   http://localhost:5000/api/animals/
+   http://localhost:5000/api/animalshelter/
 
 #### Response
 
