@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AnimalShelterApi.Models;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.Versioning
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,21 @@ builder.Services.AddDbContext<AnimalShelterContext>(
             ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"])
         )
 );
+
+//Add Api Versioning
+builder.Services.AddApiVersioning(options => {
+    // Returns all version with depricated versions
+    options.ReportApiVersions = true;
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.ApiVersionReader = ApiVersionReader.Combine(
+        //Query Strying type
+        new QueryStringApiVersionReader("api-version"),
+        //Request Heardes Type
+        new HeaderApiVersionReader("Accept-Version"),
+        //Media Type
+        new MediaTypeApiVersionReader("api-version"));
+});
 
 var app = builder.Build();
 
