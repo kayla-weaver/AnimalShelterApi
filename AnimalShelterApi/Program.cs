@@ -1,11 +1,13 @@
 using System;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AnimalShelterApi.Models;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.AspNetCore.Mvc.Versioning
+using Microsoft.AspNetCore.Mvc.Versioning;
+
 
 
 var builder = WebApplication.CreateBuilder(args);

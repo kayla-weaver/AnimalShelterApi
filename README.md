@@ -18,110 +18,109 @@ An API project that allows users to Create, Read, Update, and Delete animals and
 ## API Endpoints
 
 #### Request
-`GET /animalshelterr/`
+`GET api/animalshelter/`
 
-   http://localhost:5000/api/animalshelter/
+EXAMPLE URL: http://localhost:5000/api/animalshelter/
 
 #### Response
-
-
-{
-          AnimalId = 1,
-          Name = "Abby",
-          Age = 7,
-          Species = "Dog",
-          About = "Insane in the membrane and loves long walks off short docks"
-        },
-        new Animal
-        {
-          AnimalId = 2,
-          Name = "Bella",
-          Age = 11,
-          Species = "Dog",
-          About = "Sweet girl can never play enough fetch"
-        },
-        new Animal
-        {
-          AnimalId = 3,
-          Name = "Lemon",
-          Age = 5,
-          Species = "Kitty",
-          About = "Will keep your home safe from rats and birds"
-        }
+    [  
+      {
+        AnimalId = 1,
+        Name = "Abby",
+        Age = 7,
+        Species = "Dog",
+        About = "Insane in the membrane and loves long walks off shor docks"
+      },
+      new Animal
+      {
+        AnimalId = 2,
+        Name = "Bella",
+        Age = 11,
+        Species = "Dog",
+        About = "Sweet girl can never play enough fetch"
+      },
+      new Animal
+      {
+        AnimalId = 3,
+        Name = "Lemon",
+        Age = 5,
+        Species = "Kitty",
+        About = "Will keep your home safe from rats and birds"
+      }
+    ]
 
 ### 2. Get a specific Animal
 #### Request
-`GET /animals/id`
+`GET api/animalshelter/{id}`
 
-   http://localhost:5000/api/animalshelter/1
+EXAMPLE URL: http://localhost:5000/api/animalshelter/1
 
    #### Response 
-        {
-          AnimalId = 1,
-          Name = "Abby",
-          Age = 7,
-          Species = "Dog",
-          About = "Insane in the membrane and loves long walks off short docks"
-        }
+    {
+      AnimalId = 1,
+      Name = "Abby",
+      Age = 7,
+      Species = "Dog",
+      About = "Insane in the membrane and loves long walks off shordocks"
+    }
 
 
-### 3. GET animals by type or age 
+### 3. GET animals by species, name or age 
 #### Request
-`GET /animals/id`
+`GET /api/animalshelter/?[PARAMETER_NAME]=[PARAMETER_VALUE]&[PARAMETER_NAME]=[PARAMETER_VALUE]`
 
-   http://localhost:5000/api/animals?species=kitty&age=5&name=lemon
+EXAMPLE_URL: http://localhost:5000/api/animals?species=kitty&age=5&name=lemon
 
 #### Response
     {
-          AnimalId = 3,
-          Name = "Lemon",
-          Age = 5,
-          Species = "Kitty",
-          About = "Will keep your home safe from rats and birds"
-        }
+      AnimalId = 3,
+      Name = "Lemon",
+      Age = 5,
+      Species = "Kitty",
+      About = "Will keep your home safe from rats and birds"
+    }
 
 ### 4. Create a new Animal
 
 #### Request
 
-`POST /animal/`
+`POST /api/animalshelter/`
 
-    http://localhost:5000/api/animalshelter
+EXAMPLE URL: http://localhost:5000/api/animalshelter
 
-#### Request body
-     { 
-              AnimalId = 4, 
-              Name = "Sid", 
-              Species = "Sloth",
-              Age = 2,
-              About = " just a silly goose trying to survive the end of the world as we know it " 
-            }
+#### Example Request body
+    {  
+      Name = "Sid", //optional
+      Species = "Sloth", //optional
+      Age = 2, //optional
+      About = " just a silly goose trying to survive the end of the world as we know it " //optional
+    }
 
 
 ### 5. Edit an Animal's information
 
 #### Request
 
-`PUT /thing/id`
+`PUT /api/animalshelter/{id}`
 
-   PUT http://localhost:5000/api/animalshelter/3
+EXAMPLE URL: http://localhost:5000/api/animalshelter/4
 
-#### Request Body
-{ 
-              AnimalId = 4, 
-              Name = "Sid", 
-              Species = "Sloth",
-              Age = 2,
-              About = " looking for my friends have you seen them " 
-            }
+#### Example Request Body
+    { 
+      AnimalId = 4, // value must match id value provided in URL
+      Name = "Sid", //optional
+      Species = "Sloth", //optional
+      Age = 2, //optional
+      About = " looking for my friends have you seen them " //optional
+    }
 
 ### 6. Delete an Animal
 
 #### Request
 
-`DELETE /animals/id`
+`DELETE /api/animalshelter/{id}`
 
-   DELETE http://localhost:5000/api/animalshelter/3
+EXAMPLE URL: http://localhost:5000/api/animalshelter/3
 
 #### Response
 
@@ -238,9 +237,10 @@ _To run this application:_
   ```
    Note: To exit, simply press ```Ctrl + C```
 
+* Visit [swagger documentation:](https://localhost:5001/swagger/index.html) to see API running or visit `http://localhost:5000/api/animalshelter/` in Postman.
    ## Known Bugs
 
-_I have no yet added on my further exploration! other than that, the api is fully functional! :) ._
+_No known bugs._
 
 
 ## Technologies Used
